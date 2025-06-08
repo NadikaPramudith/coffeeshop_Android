@@ -403,13 +403,13 @@ public class Ordering extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
         
-        // Ensure buttons are visible and have proper styling
+
         Button positiveButton = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
         Button negativeButton = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
         
         if (positiveButton != null) {
             positiveButton.setAllCaps(false);
-            // Change positive button color to match the negative button (darker_gray)
+
             positiveButton.setTextColor(getResources().getColor(android.R.color.darker_gray));
         }
         
