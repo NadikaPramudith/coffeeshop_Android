@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/expressoFragment"
+        android:name="com.netceylon.coffeeshop.User.CoffeeFragments.ExpressoFragment"
+        android:label="ExpressoFragment"
+        tools:layout="@layout/fragment_expresso">
+
+        <action
+            android:id="@+id/action_expressoFragment_to_coffeeDetailsFragment"
+            app:destination="@id/coffeeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.netceylon.coffeeshop.User.MainFragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.netceylon.coffeeshop.User.MainFragments.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/specialOffersFragment"
+        android:name="com.netceylon.coffeeshop.User.MainFragments.SpecialOffersFragment"
+        android:label="fragment_special_offers"
+        tools:layout="@layout/fragment_special_offers" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.netceylon.coffeeshop.User.MainFragments.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/coffeeRecyclerFragment"
+        android:name="com.netceylon.coffeeshop.User.MainFragments.CoffeeRecyclerFragment"
+        android:label="CoffeeRecyclerFragment" />
+    <fragment
+        android:id="@+id/coffeeDetailsFragment"
+        android:name="com.netceylon.coffeeshop.User.MainFragments.CoffeeDetailsFragment"
+        android:label="fragment_coffee_details"
+        tools:layout="@layout/fragment_coffee_details" >
+        <argument
+            android:name="imageResId"
+            app:argType="integer" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="toastText"
+            app:argType="string" />
+        <argument
+            android:name="milkName"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+    </fragment>
+</navigation>
